@@ -69,7 +69,7 @@ infoAboutStudent fillStruct() {
 		getline(cin, firstMark);
 		if (isInt(firstMark)) {
 			first_Mark = stoi(firstMark);
-			if (first_Mark >= 2 && first_Mark <= 5)
+			if (first_Mark >= 2 && first_Mark <= 5 || first_Mark == 0)
 				break;
 		}
 		else
@@ -82,7 +82,7 @@ infoAboutStudent fillStruct() {
 		getline(cin, secondMark);
 		if (isInt(secondMark)) {
 			second_Mark = stoi(secondMark);
-			if (second_Mark >= 2 && second_Mark <= 5)
+			if (second_Mark >= 2 && second_Mark <= 5 || second_Mark == 0)
 				break;
 		}
 		else
@@ -95,7 +95,7 @@ infoAboutStudent fillStruct() {
 		getline(cin, thirdMark);
 		if (isInt(thirdMark)) {
 			third_Mark = stoi(thirdMark);
-			if (third_Mark >= 2 && third_Mark <= 5)
+			if (third_Mark >= 2 && third_Mark <= 5 || third_Mark == 0)
 				break;
 		}
 		else
