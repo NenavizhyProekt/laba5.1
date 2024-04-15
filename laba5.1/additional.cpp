@@ -5,7 +5,7 @@
 bool isValidName(string name) {
 	if (name[0] == ' ' || name[0] == '.')
 		return false;
-	for (int i = 1; i < name.length(); i++) {
+	for (int i = 0; i < name.length(); i++) {
 		if (name[i] >= 'A' && name[i] <= 'Z' || name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'А' && name[i] <= 'Я' || name[i] >= 'а' && name[i] <= 'я' ||
 			name[i] == ' ' || name[i] == '.')
 			continue;
@@ -21,7 +21,6 @@ bool isInt(string user_num) {
         if (!isdigit(user_num[i])) {
             cout << "Введены некорректные данные" << endl;
             return false;
-            break;
         }
     return true;
 }
@@ -44,8 +43,8 @@ infoAboutStudent fillStruct() {
 		getline(cin, studBook);
 		if (isInt(studBook))
 			stud_Book = stoi(studBook);
-		if (stud_Book > 0)
-			break;
+			if (stud_Book > 0)
+				break;
 		else
 			continue;
 		cout << "Введено неверное число, попробуйте еще раз: ";
